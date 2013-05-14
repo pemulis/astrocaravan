@@ -1,14 +1,14 @@
 <h1>New User</h1>
 
 <%= form_for @user do |f| %>
-  <%= f.label :name %>
+  <%= f.label :name, 'Name' %>
   <%= f.text_field :name %>
 
-  <%= f.label :skills %>
+  <%= f.label :skills, 'Skills' %>
   <%= f.text_field :skills %>
 
-  <%= f.label :description %>
+  <%= f.label :description, 'What do you want to work on?' %>
   <%= f.text_field :description %>
 
-  <%= f.submit %>
+  <%= f.submit 'Create Profile' %>
 <% end %>

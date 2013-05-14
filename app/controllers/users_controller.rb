@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     if current_user.nil?
-      render action: :new
+      redirect_to action: :new
     end
   end
 
