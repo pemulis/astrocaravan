@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   def index
+    if current_user.nil?
+      render action: :new
+    end
   end
 
   def show
@@ -9,6 +12,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def edit
