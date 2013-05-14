@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130514042725) do
+ActiveRecord::Schema.define(version: 20130514165737) do
 
   create_table "sessions", force: true do |t|
-    t.string   "user_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20130514042725) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end
