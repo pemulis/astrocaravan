@@ -5,7 +5,7 @@ ruby '1.9.3'
 gem 'rails', '4.0.0.beta1'
 gem 'activesupport', '4.0.0.beta1'
 
-gem 'sqlite3'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,7 +20,6 @@ group :assets do
 end
 
 group :production do
-  gem 'pg'
 end
 
 gem 'jquery-rails'
