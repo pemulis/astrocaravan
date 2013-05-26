@@ -6,6 +6,7 @@ gem 'rails', '4.0.0.beta1'
 gem 'activesupport', '4.0.0.beta1'
 
 gem 'pg'
+gem 'bcrypt-ruby'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,6 +18,9 @@ group :assets do
   # gem 'therubyracer', platforms: :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development do
 end
 
 group :production do
