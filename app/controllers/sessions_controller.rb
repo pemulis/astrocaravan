@@ -1,10 +1,11 @@
 class SessionsController < ApplicationController
-  def new
-  end
-
   def create
+    # Do stuff, and then...
+    redirect_to root_url
   end
 
   def destroy
+    # Do stuff, and then...
+    redirect_to root_url
   end
 end

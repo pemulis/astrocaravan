@@ -1,0 +1,12 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name, 'Name' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :skills, 'Skills' %>
+  <%= f.text_area :skills %>
+
+  <%= f.label :description, 'What do you want to work on?' %>
+  <%= f.text_area :description %>
+
+  <%= f.submit 'Create Profile' %>
+<% end %>
