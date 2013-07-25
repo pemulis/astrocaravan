@@ -13,6 +13,8 @@ gem 'rails-observers'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
 
+gem 'rails_12factor', group: :production
+
 gem 'sass-rails',     '~> 4.0.0'
 gem 'bootstrap-sass', '~> 2.3.2.1'
 gem 'jquery-rails'
