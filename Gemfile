@@ -27,6 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.0'
+  gem 'annotate',    '~> 2.5.0'
 end
 
 group :production do
