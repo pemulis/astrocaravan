@@ -1,7 +1,7 @@
 DevRoulette::Application.routes.draw do
   get "sessions/create"
   get "sessions/destroy"
-  root to: 'users#index'
+  root to: 'posts#index'
 
   resources :users
   resources :posts

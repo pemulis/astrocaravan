@@ -1,0 +1,9 @@
+<%= form_for(@post) do |f| %>
+  <%= f.label :name, 'Name' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description, 'What do you want to work on?' %>
+  <%= f.text_area :description %>
+
+  <%= f.submit 'Post Project' %>
+<% end %>
