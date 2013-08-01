@@ -3,8 +3,12 @@ DevRoulette::Application.routes.draw do
   get "sessions/destroy"
   root to: 'posts#index'
 
+  concern :commentable do
+    resources :comments
+  end
+
   resources :users
-  resources :posts
+  resources :posts, concerns: :commentable
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
