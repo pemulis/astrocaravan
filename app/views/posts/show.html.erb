@@ -3,6 +3,10 @@
 <h1><%= @post.name %></h1>
 <p><%= h(@post.description).gsub(/\n/, '<br/>').html_safe %></p>
 
+<div id='comments'>
+  <%= render(@comments) || "There are no comments yet." %>
+</div>
+
 <div class='bottomLink'>
   <%= link_to "go back", root_path %>
 </div>
