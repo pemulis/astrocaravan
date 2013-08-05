@@ -13,3 +13,12 @@
  */
 
 @import "bootstrap";
+
+#devise_links {
+  display: block;
+  float: left;
+  clear: left;
+  margin: {
+    top: 1em;
+  }
+}
