@@ -1,7 +1,7 @@
 DevRoulette::Application.routes.draw do
-  resources :events
-
-  resources :projects
+  concern :commentable do
+    resources :comments
+  end
 
   devise_for :users
   get "sessions/create"
@@ -9,9 +9,9 @@ DevRoulette::Application.routes.draw do
   root to: 'posts#index'
 
   resources :users
-  resources :posts do
-    resources :comments
-  end
+  resources :posts, concerns: :commentable 
+  resources :events, concerns: :commentable 
+  resources :projects, concerns: :commentable
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
