@@ -1,0 +1,21 @@
+<p id='notice'><%= notice %></p>
+
+<h1><%= @project.name %></h1>
+<p><%= h(@project.description).gsub(/\n/, '<br/>').html_safe %></p>
+
+<p id="details">
+<% if @project.location %><%= @project.location %>
+<% end %>
+</p>
+
+<div id='comments'>
+  <h2>Comments</h2>
+  <%= render(@comments) || "There are no comments yet." %>
+  <div id='new_comment'>
+    <%= link_to 'New Comment', [:new, @commentable, :comment] %>
+  </div>
+</div>
+
+<div id='bottom_link'>
+  <%= link_to "go back", root_path %>
+</div>
