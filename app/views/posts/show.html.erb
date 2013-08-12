@@ -4,11 +4,11 @@
 <p><%= h(@post.description).gsub(/\n/, '<br/>').html_safe %></p>
 
 <div id='comments'>
+  <h2>Comments</h2>
   <%= render(@comments) || "There are no comments yet." %>
-</div>
-
-<div id='new_comment'>
-  <%= link_to 'New Comment', [:new, @commentable, :comment] %>
+  <div id='new_comment'>
+    <%= link_to 'New Comment', [:new, @commentable, :comment] %>
+  </div>
 </div>
 
 <div id='bottom_link'>
