@@ -1,13 +1,5 @@
 <h1>Hackonauts!</h1>
 
-<h2>Posts</h2>
-<ul>
-<% @posts.each do |post| %>
-  <li><%= link_to "#{post.name}", post_path(post) %></li>
-<% end %>
-</ul>
-<%= link_to "New post?", controller: :posts, action: :new %>
-
 <h2>Projects</h2>
 <ul>
 <% @projects.each do |project| %>
