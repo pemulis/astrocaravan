@@ -1,4 +1,5 @@
 DevRoulette::Application.routes.draw do
+  get "home/index"
   concern :commentable do
     resources :comments
   end
@@ -6,7 +7,7 @@ DevRoulette::Application.routes.draw do
   devise_for :users
   get "sessions/create"
   get "sessions/destroy"
-  root to: 'posts#index'
+  root to: 'home#index'
 
   resources :users
   resources :posts, concerns: :commentable 
