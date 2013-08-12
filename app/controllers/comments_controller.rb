@@ -1,20 +1,21 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :load_commentable
 
   def index
+    @comments = @commentable.comments
   end
 
   def new
-    @comment = Comment.new
+    @comment = @commentable.comments.new 
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = @commentable.comments.new(comment_params)
     if @comment.save
-      # add that comment to the list with ajax
+      redirect_to @commentable, notice: 'Comment created.'
     else
-      notice = 'Something went wrong when we tried to add your comment...'
-      # reload the page?
+      render :new
     end
   end
 
@@ -25,17 +26,19 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @comment = Comment.find(params[:id])
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
   end
 
   private
 
   def comment_params
-    params.require(:comment).permit(:user_id, :post_id, :body)
+    params.require(:comment).permit(:user_id, :body)
+  end
+
+  def load_commentable
+    resource, id = request.path.split('/')[1,2]
+    @commentable = resource.singularize.classify.constantize.find(id)
   end
 end

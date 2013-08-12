@@ -1,2 +1,11 @@
-<h1>Comments#index</h1>
-<p>Find me in app/views/comments/index.html.erb</p>
+<h2>Comments</h2>
+
+<div id='comments'>
+  <% @comments.each do |comment| %>
+    <div class='comment'>
+      <%= simple_format comment.body %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New Comment", [:new, @commentable, :comment] %>
