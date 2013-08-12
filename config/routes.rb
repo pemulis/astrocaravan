@@ -1,4 +1,8 @@
 DevRoulette::Application.routes.draw do
+  resources :events
+
+  resources :projects
+
   devise_for :users
   get "sessions/create"
   get "sessions/destroy"
