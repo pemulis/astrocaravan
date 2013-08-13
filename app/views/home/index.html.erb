@@ -3,7 +3,7 @@
 <h2>Projects</h2>
 <ul>
 <% @projects.each do |project| %>
-  <li><%= link_to "#{project.name}", post_path(project) %></li>
+  <li><%= link_to "#{project.name}", project_path(project) %></li>
 <% end %>
 </ul>
 <%= link_to "New project?", controller: :projects, action: :new %>
@@ -11,7 +11,7 @@
 <h2>Events</h2>
 <ul>
 <% @events.each do |event| %>
-  <li><%= link_to "#{event.name}", post_path(event) %></li>
+  <li><%= link_to "#{event.name}", event_path(event) %></li>
 <% end %>
 </ul>
 <%= link_to "New event?", controller: :events, action: :new %>
