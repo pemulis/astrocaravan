@@ -1,12 +1,12 @@
 <p id='notice'><%= notice %></p>
 
 <h1><%= @project.name %></h1>
-<div>
-  <%= filepicker_image_tag @project.image_url, w: 200, h: 160, fit: 'clip' %>
+<div id='image_display'>
+  <%= filepicker_image_tag @project.image_url %>
 </div>
 <p><%= h(@project.description).gsub(/\n/, '<br/>').html_safe %></p>
 
-<p id="details">
+<p id='details'>
 <% if @project.location %><%= @project.location %>
 <% end %>
 </p>

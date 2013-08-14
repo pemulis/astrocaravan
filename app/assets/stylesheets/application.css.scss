@@ -32,6 +32,18 @@
   font-style: bold;
 }
 
+#image_display {
+  padding: {
+    top: 5pt;
+    bottom: 5pt;
+  }
+  margin: {
+    top: 8pt;
+    bottom: 8pt;
+  }
+  max-width: 800pt;
+}
+
 .form_wrapper {
   display: block;
   width: 100%;
