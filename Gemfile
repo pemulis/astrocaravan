@@ -20,7 +20,12 @@ gem 'bootstrap-sass', '~> 2.3.2.1'
 gem 'jquery-rails'
 gem 'coffee-rails',   '~> 4.0.0'
 
+# Devise for user authentication
 gem 'devise'
+# Ink Filepicker for image upload and management
+gem 'filepicker-rails'
+# Add Figaro to hide configuration in environment variables
+gem 'figaro'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
