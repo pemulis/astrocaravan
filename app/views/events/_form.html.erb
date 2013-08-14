@@ -21,7 +21,7 @@
 
   <div class='form_wrapper'>
     <%= f.label :image_url, 'Upload a picture!' %>
-    <%= f.filepicker_field :image_url %>
+    <%= f.filepicker_field :image_url, multiple: true, name: "event[image_url]" %>
   </div>
 
   <%= f.submit 'Post Event' %>

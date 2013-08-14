@@ -1,6 +1,9 @@
 <p id='notice'><%= notice %></p>
 
 <h1><%= @project.name %></h1>
+<div>
+  <%= filepicker_image_tag @project.image_url, w: 200, h: 160, fit: 'clip' %>
+</div>
 <p><%= h(@project.description).gsub(/\n/, '<br/>').html_safe %></p>
 
 <p id="details">
