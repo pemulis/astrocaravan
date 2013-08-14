@@ -1,16 +1,28 @@
 <%= form_for(@event) do |f| %>
-  <%= f.label :name, 'Event name' %>
-  <%= f.text_field :name %>
+  <div class='form_wrapper'>
+    <%= f.label :name, 'Event name' %>
+    <%= f.text_field :name %>
+  </div>
 
-  <%= f.label :description, 'What is this event about?' %>
-  <%= f.text_area :description %>
+  <div class='form_wrapper'>
+    <%= f.label :description, 'What is this event about?' %>
+    <%= f.text_area :description %>
+  </div>
 
-  <%= f.label :location, 'Where is the event being held?' %>
-  <%= f.text_field :location %>
+  <div class='form_wrapper'>
+    <%= f.label :location, 'Where is the event being held?' %>
+    <%= f.text_field :location %>
+  </div>
 
-  <%= f.label :date, 'When is the event?' %>
-  <%= f.select_datetime :date %>
+  <div class='form_wrapper'>
+    <%= f.label :date, 'When is the event?' %>
+    <%= f.datetime_select :date %>
+  </div>
+
+  <div class='form_wrapper'>
+    <%= f.label :image_url, 'Upload a picture!' %>
+    <%= f.filepicker_field :image_url %>
+  </div>
 
   <%= f.submit 'Post Event' %>
 <% end %>
-

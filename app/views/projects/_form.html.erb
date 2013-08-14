@@ -1,12 +1,23 @@
 <%= form_for(@project) do |f| %>
-  <%= f.label :name, 'Project name' %>
-  <%= f.text_field :name %>
+  <div class='form_wrapper'>
+    <%= f.label :name, 'Project name' %>
+    <%= f.text_field :name %>
+  </div>
 
-  <%= f.label :description, 'What are you working on?' %>
-  <%= f.text_area :description %>
+  <div class='form_wrapper'>
+    <%= f.label :description, 'What are you working on?' %>
+    <%= f.text_area :description %>
+  </div>
 
-  <%= f.label :location, 'Where are you working on this? (Optional)' %>
-  <%= f.text_field :location %>
+  <div class='form_wrapper'>
+    <%= f.label :location, 'Where are you working on this? (optional)' %>
+    <%= f.text_field :location %>
+  </div>
+  
+  <div class='form_wrapper'>
+    <%= f.label :image_url, 'Upload a picture!' %>
+    <%= f.filepicker_field :image_url %>
+  </div>
 
   <%= f.submit 'Post Project' %>
 <% end %>
