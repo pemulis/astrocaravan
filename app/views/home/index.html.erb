@@ -1,17 +1,30 @@
 <h1>Hackonauts!</h1>
 
+<div id='projects'>
 <h2>Projects</h2>
+<div id='new_project_link'>
+<%= link_to "New project?", controller: :projects, action: :new %>
+</div>
 <ul>
 <% @projects.each do |project| %>
-  <li><%= link_to "#{project.name}", project_path(project) %></li>
+  <li class='project'>
+    <div class='project_img'>
+      <%= filepicker_image_tag project.image_url, w: 135, h: 125, fit: 'clip' %>
+    </div>
+    <%= link_to "#{project.name}", project_path(project) %>
+  </li>
 <% end %>
 </ul>
-<%= link_to "New project?", controller: :projects, action: :new %>
+</div>
 
+<div id='events'>
 <h2>Events</h2>
-<ul>
+<div id='new_event_link'>
+<%= link_to "New event?", controller: :events, action: :new %>
+</div>
+<ul id='events'>
 <% @events.each do |event| %>
-  <li><%= link_to "#{event.name}", event_path(event) %></li>
+  <li class='event'><%= link_to "#{event.name}", event_path(event) %></li>
 <% end %>
 </ul>
-<%= link_to "New event?", controller: :events, action: :new %>
+</div>

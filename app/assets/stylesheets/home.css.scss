@@ -1,3 +1,56 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#projects { 
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-bottom: 10pt;
+  ul {
+    float: left;
+    clear: both;
+    list-style-type: none;
+  }
+}
+
+#new_project_link {
+  float: right;
+  clear: both;
+  margin-bottom: 4pt;
+}
+
+#events {
+  ul {
+    list-style-type: none;
+  }
+}
+
+#new_event_link {
+  float: right;
+  clear: both;
+  margin-bottom: 4pt;
+}
+
+.project {
+  float: left;
+  height: 120pt;
+  width: 120pt;
+  border: 1pt solid gray;
+  padding: 2pt;
+  text-align: center;
+  margin: {
+    left: 12pt;
+    bottom: 8pt;
+  }
+}
+
+.project_img {
+  height: 80pt;
+  margin-bottom: 5pt;
+}
+
+.event {
+  text-align: center;
+}
