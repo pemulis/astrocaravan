@@ -25,7 +25,6 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_and_belongs_to_many :posts
   has_and_belongs_to_many :projects
   has_and_belongs_to_many :events
   has_many :comments
