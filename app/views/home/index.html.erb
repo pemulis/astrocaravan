@@ -9,7 +9,7 @@
 <% @projects.each do |project| %>
   <li class='project'>
     <div class='project_img'>
-      <%= filepicker_image_tag project.image_url, w: 135, h: 125, fit: 'clip' %>
+      <%= filepicker_image_tag project.image_url, w: 250, h: 250, fit: 'clip' %>
     </div>
     <%= link_to "#{project.name}", project_path(project) %>
   </li>

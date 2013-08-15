@@ -15,7 +15,7 @@ class Project < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :comments, as: :commentable
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 50 }
   validates :description, presence: true,
                           length: { minimum: 10 }
 end
