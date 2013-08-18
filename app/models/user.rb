@@ -28,4 +28,20 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :projects
   has_and_belongs_to_many :events
   has_many :comments
+
+  # Virtual attribute for authenticating by either username or e-mail
+  attr_accessor :login
+
+  def self.find_first_by_auth_conditions(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions).where(["lower(username) = :value OR lower(email) = :value", { value: login.downcase }]).first
+    else
+      where(conditions).first
+    end
+  end
+
+  # Validations
+  validates :username, uniqueness: { case_sensitive: false }
+  validates :email, uniqueness: { case_sensitive: false } 
 end
