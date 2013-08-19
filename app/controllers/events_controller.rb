@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @events = Event.all
