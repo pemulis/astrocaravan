@@ -18,7 +18,7 @@
 #new_project_link {
   float: right;
   clear: both;
-  margin-bottom: 4pt;
+  margin-bottom: 10pt;
 }
 
 #events {
@@ -30,13 +30,12 @@
 #new_event_link {
   float: right;
   clear: both;
-  margin-bottom: 4pt;
+  margin-bottom: 10pt;
 }
 
 .project {
   float: left;
   height: 200pt;
-  width: 200pt;
   border: 1pt solid gray;
   padding: 2pt;
   text-align: center;
@@ -44,6 +43,11 @@
     left: 12pt;
     bottom: 8pt;
   }
+}
+
+.row {
+  float: left;
+  clear: both;
 }
 
 .project_img {
