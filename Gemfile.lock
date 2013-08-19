@@ -7,6 +7,13 @@ GIT
       activerecord (~> 4.0)
       railties (~> 4.0)
 
+GIT
+  remote: git://github.com/yrgoldteeth/bootstrap-will_paginate.git
+  revision: 994fbb96ab52d2bdbb6035e534060f9df18b34c6
+  specs:
+    bootstrap-will_paginate (0.0.9)
+      will_paginate
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -146,6 +153,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.4)
 
 PLATFORMS
   ruby
@@ -157,6 +165,7 @@ DEPENDENCIES
   annotate (~> 2.5.0)
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass (~> 2.3.2.1)
+  bootstrap-will_paginate!
   coffee-rails (~> 4.0.0)
   devise
   figaro

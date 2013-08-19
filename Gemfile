@@ -26,6 +26,8 @@ gem 'devise'
 gem 'filepicker-rails'
 # Add Figaro to hide configuration in environment variables
 gem 'figaro'
+# Make pagination easier
+gem 'bootstrap-will_paginate', git: 'git://github.com/yrgoldteeth/bootstrap-will_paginate.git' 
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

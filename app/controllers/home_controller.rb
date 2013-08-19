@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.paginate(page: params[:page])
     @events = Event.all
   end
 end
