@@ -16,7 +16,17 @@
 
 section.form {
   clear: left;
-  width: 100%
+  width: 100%;
+  margin-bottom: 5pt;
+}
+
+button {
+  float: left;
+  clear: left;
+}
+
+input[type=submit] {
+  margin-top: 20pt;
 }
 
 aside {
@@ -58,12 +68,12 @@ aside {
   max-width: 800pt;
 }
 
-.form_wrapper {
+.form-wrapper {
   display: block;
   width: 100%;
   float: left;
   margin: {
     right: auto;
-    bottom: 15pt;
+    bottom: 10pt;
   }
 }

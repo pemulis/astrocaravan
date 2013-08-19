@@ -1,30 +1,20 @@
 <section class="form pull-left">
 <%= form_for(@event) do |f| %>
-  <div class='form_wrapper'>
-    <%= f.label :name, 'Event name' %>
-    <%= f.text_field :name %>
-  </div>
+  <%= f.label :name, 'Event name' %>
+  <%= f.text_field :name %>
 
-  <div class='form_wrapper'>
-    <%= f.label :description, 'What is this event about?' %>
-    <%= f.text_area :description %>
-  </div>
+  <%= f.label :description, 'What is this event about?' %>
+  <%= f.text_area :description %>
 
-  <div class='form_wrapper'>
-    <%= f.label :location, 'Where is the event being held?' %>
-    <%= f.text_field :location %>
-  </div>
+  <%= f.label :location, 'Where is the event being held?' %>
+  <%= f.text_field :location %>
 
-  <div class='form_wrapper'>
-    <%= f.label :date, 'When is the event?' %>
-    <%= f.datetime_select :date %>
-  </div>
+  <%= f.label :date, 'When is the event?' %>
+  <%= f.datetime_select :date %>
 
-  <div class='form_wrapper'>
-    <%= f.label :image_url, 'Upload a picture!' %>
-    <%= f.filepicker_field :image_url, multiple: true, name: "event[image_url]" %>
-  </div>
+  <%= f.label :image_url, 'Upload a picture!' %>
+  <%= f.filepicker_field :image_url, multiple: true, name: "event[image_url]", class: "btn btn-default" %>
 
-  <%= f.submit 'Post Event' %>
+  <%= f.submit 'Post Event', class: "btn btn-primary" %>
 <% end %>
 </section>

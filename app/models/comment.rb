@@ -9,6 +9,7 @@
 #  updated_at       :datetime
 #  commentable_id   :integer
 #  commentable_type :string(255)
+#  username         :string(255)
 #
 
 class Comment < ActiveRecord::Base

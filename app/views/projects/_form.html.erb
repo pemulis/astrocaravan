@@ -1,25 +1,17 @@
 <section class="form pull-left">
 <%= form_for(@project) do |f| %>
-  <div class='form_wrapper'>
-    <%= f.label :name, 'Project name' %>
-    <%= f.text_field :name %>
-  </div>
+  <%= f.label :name, 'Project name' %>
+  <%= f.text_field :name %>
 
-  <div class='form_wrapper'>
-    <%= f.label :description, 'What are you working on?' %>
-    <%= f.text_area :description %>
-  </div>
+  <%= f.label :description, 'What are you working on?' %>
+  <%= f.text_area :description %>
 
-  <div class='form_wrapper'>
-    <%= f.label :location, 'Where are you working on this? (optional)' %>
-    <%= f.text_field :location %>
-  </div>
-  
-  <div class='form_wrapper'>
-    <%= f.label :image_url, 'Upload a picture!' %>
-    <%= f.filepicker_field :image_url, multiple: true, name: "project[image_url]" %>
-  </div>
+  <%= f.label :location, 'Where are you working on this? (optional)' %>
+  <%= f.text_field :location %>
 
-  <%= f.submit 'Post Project' %>
+  <%= f.label :image_url, 'Upload a picture!' %>
+  <%= f.filepicker_field :image_url, multiple: true, name: "project[image_url]", class: "btn btn-default" %>
+
+  <%= f.submit 'Post Project', class: "btn btn-primary" %>
 <% end %>
 </section>
