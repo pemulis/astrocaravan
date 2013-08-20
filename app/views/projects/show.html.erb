@@ -7,8 +7,9 @@
 <p><%= h(@project.description).gsub(/\n/, '<br/>').html_safe %></p>
 
 <p id='details'>
-<% if @project.location %><%= @project.location %>
-<% end %>
+  <% if @project.location %>
+    <strong><%= @project.location %></strong>
+  <% end %>
 </p>
 
 <div id='comments'>

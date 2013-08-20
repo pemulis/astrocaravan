@@ -7,8 +7,9 @@
 <p><%= h(@event.description).gsub(/\n/, '<br/>').html_safe %></p>
 
 <p id="details">
-  <% if @event.date %><%= @event.date %><% end %>
-  <% if @event.location %><%= " @ " + @event.location %><% end %>
+  <% if @event.date %><strong><%= @event.date.strftime("%B %e, %Y") %></strong>
+<% end %>
+  <% if @event.location %><strong> @ <%= @event.location %></strong><% end %>
 </p>
 
 <div id='comments'>
