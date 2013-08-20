@@ -16,7 +16,11 @@ class Event < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :comments, as: :commentable
 
+  # Validations
   validates :name, presence: true
   validates :description, presence: true,
                           length: { minimum: 10 }
+
+  # Pagination stuff
+  self.per_page = 9 
 end

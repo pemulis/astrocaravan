@@ -28,6 +28,8 @@ gem 'filepicker-rails'
 gem 'figaro'
 # Make pagination easier
 gem 'bootstrap-will_paginate', git: 'git://github.com/yrgoldteeth/bootstrap-will_paginate.git' 
+# Better datepicker, integrated with Bootstrap and the asset pipeline
+gem 'bootstrap-datepicker-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

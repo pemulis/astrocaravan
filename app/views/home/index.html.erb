@@ -25,9 +25,9 @@
 <div id='new_event_link'>
 <%= link_to "New event?", controller: :events, action: :new %>
 </div>
-<ul id='events'>
+<ul>
 <% @events.each do |event| %>
-  <li class='event'><%= link_to "#{event.name}", event_path(event) %></li>
+  <li class='event'><%= link_to "#{event.name}", event_path(event) %> at <strong><%= event.location %></strong> on <strong><%= event.date %></strong></li>
 <% end %>
 </ul>
 </div>

@@ -1,6 +1,8 @@
 <h1><%= @project.name %></h1>
 <div id='image_display'>
-  <%= filepicker_image_tag @project.image_url %>
+  <% unless @project.image_url.nil? %>
+    <%= filepicker_image_tag @project.image_url %>
+  <% end %>
 </div>
 <p><%= h(@project.description).gsub(/\n/, '<br/>').html_safe %></p>
 

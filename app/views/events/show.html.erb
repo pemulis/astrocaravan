@@ -1,8 +1,8 @@
-<p id='notice'><%= notice %></p>
-
 <h1><%= @event.name %></h1>
 <div id='image_display'>
-  <%= filepicker_image_tag @event.image_url, w: 200, h: 160, fit: 'clip' %>
+  <% unless @event.image_url %>
+    <%= filepicker_image_tag @event.image_url, w: 200, h: 160, fit: 'clip' %>
+  <% end %>
 </div>
 <p><%= h(@event.description).gsub(/\n/, '<br/>').html_safe %></p>
 
