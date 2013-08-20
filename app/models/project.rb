@@ -21,5 +21,5 @@ class Project < ActiveRecord::Base
                           length: { minimum: 10 }
 
   # Pagination stuff
-  self.per_page = 6 
+  self.per_page = 3
 end
