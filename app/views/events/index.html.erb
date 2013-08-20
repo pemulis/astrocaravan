@@ -1,9 +1,11 @@
+<div id='events'>
 <h1>Events</h1>
-
+<div id='new_event_link'>
+<%= link_to "New event?", controller: :events, action: :new %>
+</div>
 <ul>
 <% @events.each do |event| %>
-  <li><%= link_to "#{event.name}", event_path(event) %></li>
+  <li class='event'><%= link_to "#{event.name}", event_path(event) %> at <strong><%= event.location %></strong> on <strong><%= event.date.strftime("%B %e, %Y") %></strong></li>
 <% end %>
 </ul>
-
-<%= link_to "New event?", controller: :events, action: :new %>
+</div>

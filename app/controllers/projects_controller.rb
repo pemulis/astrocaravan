@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @projects = Project.all
+    @projects = Project.all.order("updated_at DESC").paginate(page: params[:page], per_page: 12)
   end
 
   def show

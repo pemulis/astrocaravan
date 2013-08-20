@@ -1,9 +1,19 @@
+<div id='projects'>
 <h1>Projects</h1>
-
-<ul>
-<% @projects.each do |project| %>
-  <li><%= link_to "#{project.name}", project_path(project) %></li>
-<% end %>
-</ul>
-
+<div id='new_project_link'>
 <%= link_to "New project?", controller: :projects, action: :new %>
+</div>
+<div class='row'>
+<% @projects.each do |project| %>
+  <div class='project col-xs-6 col-md-4'>
+    <div class='project_img'>
+      <% unless project.image_url.nil? %>
+        <%= filepicker_image_tag project.image_url, w: 250, h: 250, fit: 'clip' %>
+      <% end %>
+    </div>
+    <%= link_to "#{project.name}", project_path(project) %>
+  </div>
+<% end %>
+</div>
+<%= will_paginate @projects %>
+</div>

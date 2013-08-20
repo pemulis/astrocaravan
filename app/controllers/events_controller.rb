@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    @events = Event.all.order("date DESC")
   end
 
   def show

@@ -9,18 +9,19 @@
 </head>
 <body>
   <nav>
-    <% if user_signed_in? %>
-      <ul class="nav nav-tabs">
-        <li class="disabled pull-left"><a>Logged in as <strong><%= current_user.username %></strong>.</a></li>
+    <ul class="nav nav-tabs">
+      <li class="pull-left"><%= link_to 'Home', root_path %></li>
+      <li class="pull-left"><%= link_to 'Projects', projects_path %></li>
+      <li class="pull-left"><%= link_to 'Events', events_path %></li>
+      <% if user_signed_in? %>
         <li class="pull-right"><%= link_to 'Edit profile', edit_user_registration_path %></li>
         <li class="pull-right"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-      </ul>
-    <% else %>
-      <ul class="nav nav-tabs">
+        <li class="disabled pull-right"><a>Logged in as <strong><%= current_user.username %></strong>.</a></li>
+      <% else %>
         <li class="pull-right"><%= link_to "Sign up", new_user_registration_path %></li>
         <li class="pull-right"><%= link_to "Login", new_user_session_path %></li>
-      </ul>
-    <% end %>
+      <% end %>
+    </ul>
   </nav>
 
   <% if notice %><p class="notice"><%= notice %></p><% end %>
