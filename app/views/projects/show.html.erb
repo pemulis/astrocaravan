@@ -1,8 +1,10 @@
 <h1><%= @project.name %></h1>
-<% if current_user.projects.include? @project %>
-  <div class='new_or_edit_link'>
-    <%= link_to "Edit project", edit_project_path %>
-  </div>
+<% if current_user %>
+  <% if current_user.projects.include? @project %>
+    <div class='new_or_edit_link'>
+      <%= link_to "Edit project", edit_project_path %>
+    </div>
+  <% end %>
 <% end %>
 <div id='image_display'>
   <% unless @project.image_url.nil? %>
