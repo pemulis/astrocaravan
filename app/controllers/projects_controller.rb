@@ -27,9 +27,16 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @project = Project.find(params[:id])
   end
 
   def update
+    @project = current_user.projects.find(params[:id])
+    if @project.update_attributes!(project_params)
+      redirect_to @project, notice: 'Your project details were updated!'
+    else
+      redirect_to @project, notice: 'Something went wrong when we tried to update your project...'
+    end
   end
 
   def destroy

@@ -10,7 +10,6 @@ DevRoulette::Application.routes.draw do
   root to: 'home#index'
 
   resources :users
-  resources :posts, concerns: :commentable 
   resources :events, concerns: :commentable 
   resources :projects, concerns: :commentable
 
