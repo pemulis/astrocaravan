@@ -7,7 +7,8 @@
 </div>
 <div class='row'>
 <% @projects.each do |project| %>
-  <div class='project col-xs-6 col-md-4'>
+  <a href="<%= project_path(project) %>">
+    <div class='project col-xs-6 col-md-4'>
     <div class='project_img'>
       <% unless project.image_url.nil? %>
         <%= filepicker_image_tag project.image_url, w: 250, h: 250, fit: 'clip' %>
@@ -15,6 +16,7 @@
     </div>
     <%= link_to "#{project.name}", project_path(project) %>
   </div>
+  </a>
 <% end %>
 </div>
 <%= will_paginate @projects %>
