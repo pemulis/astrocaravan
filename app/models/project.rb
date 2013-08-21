@@ -14,6 +14,7 @@
 class Project < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :comments, as: :commentable
+  acts_as_taggable
 
   # Validations
   validates :name, presence: true, length: { maximum: 50 }

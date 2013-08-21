@@ -11,6 +11,8 @@
 </div>
 <p><%= h(@event.description).gsub(/\n/, '<br/>').html_safe %></p>
 
+<p class='tags'><%= @event.tag_list %></p>
+
 <p id="details">
   <% if @event.date %><strong><%= @event.date.strftime("%B %e, %Y") %></strong>
 <% end %>
