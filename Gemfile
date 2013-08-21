@@ -30,6 +30,8 @@ gem 'figaro'
 gem 'bootstrap-will_paginate', git: 'git://github.com/yrgoldteeth/bootstrap-will_paginate.git' 
 # Better datepicker, integrated with Bootstrap and the asset pipeline
 gem 'bootstrap-datepicker-rails'
+# Add a gem for tagging projects and events
+gem 'acts-as-taggable-on'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
