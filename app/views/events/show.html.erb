@@ -11,7 +11,7 @@
 </div>
 <p><%= h(@event.description).gsub(/\n/, '<br/>').html_safe %></p>
 
-<p class='tags'><%= @event.tag_list %></p>
+<p class='tags'><%= raw @event.tag_list.map { |t| link_to t, event_tag_path(t) }.join(', ') %></p>
 
 <p id="details">
   <% if @event.date %><strong><%= @event.date.strftime("%B %e, %Y") %></strong>

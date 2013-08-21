@@ -14,7 +14,7 @@
 
 <p><%= h(@project.description).gsub(/\n/, '<br/>').html_safe %></p>
 
-<p class='tags'><%= @project.tag_list %></p>
+<p class='tags'><%= raw @project.tag_list.map { |t| link_to t, project_tag_path(t) }.join(', ') %></p>
 
 <p id='details'>
   <% if @project.location %>

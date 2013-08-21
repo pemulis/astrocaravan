@@ -17,5 +17,7 @@
   </a>
 <% end %>
 </div>
-<%= will_paginate @projects %>
+<% unless params[:tag] %>
+  <%= will_paginate @projects %>
+<% end %>
 </div>
