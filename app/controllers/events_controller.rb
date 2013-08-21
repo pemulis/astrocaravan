@@ -27,9 +27,16 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:id])
   end
 
   def update
+    @event = current_user.events.find(params[:id])
+    if @event.update_attributes!(event_params)
+      redirect_to @event, notice: 'Your event details were updated!'
+    else
+      redirect_to @event, notice: 'Something went wrong when we tried to update your event...'
+    end
   end
 
   def destroy

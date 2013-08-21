@@ -9,10 +9,6 @@
   <%= f.label :location, 'Where are you working on this? (optional)' %>
   <%= f.text_field :location %>
 
-  <%= f.label :image_url, 'Upload a picture!' %>
-  <%= f.filepicker_field :image_url, multiple: true, name: "project[image_url]", class: "btn btn-default" %>
-
   <%= f.submit 'Update Project', class: "btn btn-primary" %>
 <% end %>
 </section>
-
