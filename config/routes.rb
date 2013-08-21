@@ -13,8 +13,8 @@ DevRoulette::Application.routes.draw do
   resources :events, concerns: :commentable 
   resources :projects, concerns: :commentable
 
-  get 'project_tags/:tag', to: 'projects#index', as: :project_tag
-  get 'event_tags/:tag', to: 'events#index', as: :event_tag
+  get 'project-tags/:tag', to: 'projects#index', as: :project_tag
+  get 'event-tags/:tag', to: 'events#index', as: :event_tag
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
