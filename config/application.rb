@@ -20,5 +20,9 @@ module DevRoulette
     #
     # Set Ink Filepicker API key
     config.filepicker_rails.api_key = ENV["FILEPICKER_API_KEY"] 
+
+    # Set acts_as_taggable_on configuration
+    ActsAsTaggableOn.remove_unused_tags = true
+    ActsAsTaggableOn.force_lowercase = true
   end
 end
