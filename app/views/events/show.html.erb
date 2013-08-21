@@ -5,7 +5,7 @@
   </div>
 <% end %>
 <div id='image_display'>
-  <% unless @event.image_url.empty? %>
+  <% unless @event.image_url.nil? or @event.image_url.empty? %>
     <%= filepicker_image_tag @event.image_url %>
   <% end %>
 </div>
