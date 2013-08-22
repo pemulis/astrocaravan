@@ -1,8 +1,10 @@
 <h1><%= @event.name %></h1>
-<% if current_user.events.include? @event %>
-  <div class='new_or_edit_link'>
-    <%= link_to "Edit event", edit_event_path %>
-  </div>
+<% if current_user %>
+  <% if current_user.events.include? @event %>
+    <div class='new_or_edit_link'>
+      <%= link_to "Edit event", edit_event_path %>
+    </div>
+  <% end %>
 <% end %>
 <div id='image_display'>
   <% unless @event.image_url.nil? or @event.image_url.empty? %>
