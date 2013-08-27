@@ -1,5 +1,9 @@
 <div id='events'>
-<h1>Events</h1>
+<% if params[:tag] %>
+  <h1><%= params[:tag].capitalize %> Events</h1>
+<% else %>
+  <h1>Events</h1>
+<% end %>
 <div class='new_or_edit_link'>
 <%= link_to "New event?", controller: :events, action: :new %>
 </div>

@@ -1,5 +1,9 @@
 <div id='projects'>
-<h1>Projects</h1>
+<% if params[:tag] %>
+  <h1><%= params[:tag].capitalize %> Projects</h1>
+<% else %>
+  <h1>Projects</h1>
+<% end %>
 <div class='new_or_edit_link'>
 <%= link_to "New project?", controller: :projects, action: :new %>
 </div>
