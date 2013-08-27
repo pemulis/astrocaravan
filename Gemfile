@@ -44,6 +44,10 @@ group :test, :development do
 end
 
 group :production do
+  gem 'rufus-scheduler'
+end
+
+group :production do
 end
 
 gem 'jquery-rails'
