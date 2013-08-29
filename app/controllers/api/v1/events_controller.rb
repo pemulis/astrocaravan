@@ -1,6 +1,7 @@
 module Api
   module V1
     class EventsController < ApplicationController
+      before_filter :authenticate_user!, only: [:create, :update, :destroy]
       respond_to :json
 
       def index
