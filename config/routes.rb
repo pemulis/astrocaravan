@@ -1,4 +1,13 @@
-DevRoulette::Application.routes.draw do
+require 'api_constraints'
+
+Hackonauts::Application.routes.draw do
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1, contraints: ApiConstraints.new(version: 1, default: true) do
+      resources :projects
+      resources :events
+    end
+  end
+
   get "home/index"
   concern :commentable do
     resources :comments

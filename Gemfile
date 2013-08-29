@@ -32,6 +32,8 @@ gem 'bootstrap-will_paginate', git: 'git://github.com/yrgoldteeth/bootstrap-will
 gem 'bootstrap-datepicker-rails'
 # Add a gem for tagging projects and events
 gem 'acts-as-taggable-on'
+# Add ability to rename app with a single command
+gem 'rename'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

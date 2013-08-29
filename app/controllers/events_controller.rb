@@ -16,6 +16,10 @@ class EventsController < ApplicationController
     @comment = Comment.new
   end
 
+  def new
+    @event = Event.new
+  end
+
   def create
     @event = current_user.events.create(event_params)
     if @event.save
@@ -24,10 +28,6 @@ class EventsController < ApplicationController
       notice = 'Something went wrong when we tried to add your event...'
       render action: 'new'
     end
-  end
-
-  def new
-    @event = Event.new
   end
 
   def edit

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DevRoulette::Application.load_tasks
+Hackonauts::Application.load_tasks
