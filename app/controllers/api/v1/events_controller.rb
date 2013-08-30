@@ -1,7 +1,7 @@
 module Api
   module V1
     class EventsController < ApplicationController
-      doorkeeper_for :all
+      doorkeeper_for :create, :update, :destroy
       respond_to :json
 
       def index
