@@ -70,6 +70,9 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
+    doorkeeper (0.7.0)
+      jquery-rails (~> 3.0.4)
+      railties (>= 3.1)
     erubis (2.7.0)
     execjs (2.0.1)
     figaro (0.7.0)
@@ -177,6 +180,7 @@ DEPENDENCIES
   bootstrap-will_paginate!
   coffee-rails (~> 4.0.0)
   devise
+  doorkeeper (~> 0.7.0)
   figaro
   filepicker-rails
   jbuilder (~> 1.0.1)

@@ -34,6 +34,8 @@ gem 'bootstrap-datepicker-rails'
 gem 'acts-as-taggable-on'
 # Add ability to rename app with a single command
 gem 'rename'
+# Add doorkeeper to manage OAuth2
+gem 'doorkeeper', '~> 0.7.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
