@@ -1,6 +1,9 @@
 require 'api_constraints'
 
 Hackonauts::Application.routes.draw do
+  get "subscriptions/new"
+  get "subscriptions/create"
+  get "subscriptions/destroy"
   use_doorkeeper
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1, contraints: ApiConstraints.new(version: 1, default: true) do
@@ -14,14 +17,18 @@ Hackonauts::Application.routes.draw do
     resources :comments
   end
 
+  concern :subscribable do
+    resources :subscriptions, only: [:new, :create, :destroy]
+  end
+
   devise_for :users
   get "sessions/create"
   get "sessions/destroy"
   root to: 'home#index'
 
   resources :users
-  resources :events, concerns: :commentable 
-  resources :projects, concerns: :commentable
+  resources :events, concerns: [:commentable, :subscribable] 
+  resources :projects, concerns: [:commentable, :subscribable]
 
   get 'project-tags/:tag', to: 'projects#index', as: :project_tag
   get 'event-tags/:tag', to: 'events#index', as: :event_tag
