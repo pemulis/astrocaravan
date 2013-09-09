@@ -36,6 +36,8 @@ gem 'acts-as-taggable-on'
 gem 'rename'
 # Add doorkeeper to manage OAuth2
 gem 'doorkeeper', '~> 0.7.0'
+# Add sendgrid for managing e-mails
+gem 'sendgrid'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
