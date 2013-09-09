@@ -11,9 +11,11 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @commentable = @event
+    @commentable = @subscribable = @event
     @comments = @commentable.comments
     @comment = Comment.new
+    @subscriptions = @subscribable.subscriptions
+    @subscription = Subscription.new
   end
 
   def new

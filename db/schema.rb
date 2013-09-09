@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130908203912) do
+ActiveRecord::Schema.define(version: 20130909214358) do
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
@@ -111,6 +111,8 @@ ActiveRecord::Schema.define(version: 20130908203912) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "subscriptions", ["subscribable_id", "subscribable_type"], name: "index_subscriptions_on_subscribable_id_and_subscribable_type", using: :btree
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"

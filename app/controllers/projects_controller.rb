@@ -11,9 +11,11 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @commentable = @project
+    @commentable = @subscribable = @project
     @comments = @commentable.comments
     @comment = Comment.new
+    @subscriptions = @subscribable.subscriptions
+    @subscription = Subscription.new
   end
 
   def create

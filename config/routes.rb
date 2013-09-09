@@ -1,9 +1,6 @@
 require 'api_constraints'
 
 Hackonauts::Application.routes.draw do
-  get "subscriptions/new"
-  get "subscriptions/create"
-  get "subscriptions/destroy"
   use_doorkeeper
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1, contraints: ApiConstraints.new(version: 1, default: true) do

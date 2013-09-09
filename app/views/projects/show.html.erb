@@ -26,7 +26,9 @@
   <h2>Comments</h2>
   <%= render(@comments) || "There are no comments yet." %>
   <div id='new_comment'>
-    <%= link_to 'New Comment', [:new, @commentable, :comment] %>
+    <%= link_to 'post new comment', [:new, @commentable, :comment] %>
+     &middot; 
+    <%= link_to 'subscribe to thread', [:new, @subscribable, :subscription] %>
   </div>
 </div>
 
