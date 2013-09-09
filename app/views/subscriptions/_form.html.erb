@@ -1,0 +1,7 @@
+<section class="form pull-left">
+<%= form_for [@subscribable, @subscription] do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+  <%= f.submit 'Subscribe to updates?', class: "btn btn-primary" %>
+<% end %>
+</section>
