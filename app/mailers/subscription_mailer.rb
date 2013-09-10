@@ -19,11 +19,19 @@ class SubscriptionMailer < ActionMailer::Base
   #
   #   en.user_mailer.new_comment.subject
   #
-  def new_comment(user, body)
+  def new_comment(user, body, commentable)
     @user = user
     @body = body
+    @commentable = commentable
 
     # mail to all the users subscribed to the thread when a new 
     # comment is posted
+    sendgrid_recipients = []
+    @commentable.subscriptions.each do |subscription|
+      sendgrid_recipients << subscription.user.email
+    end
+
+    mail to: sendgrid_recipients,
+         subject: "#{user} posted a comment to #{subscribable.name}"
   end
 end
