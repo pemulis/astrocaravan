@@ -9,6 +9,7 @@ class SubscriptionsController < ApplicationController
   def create
     @subscription = @subscribable.subscriptions.new(subscription_params)
     if @subscription.save
+      SubscriptionMailer.new_subscription(@user, @subscribable).deliver
       redirect_to @subscribable, notice: 'Subscription created.'
     else
       render :new
