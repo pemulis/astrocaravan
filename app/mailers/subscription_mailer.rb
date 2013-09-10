@@ -11,7 +11,7 @@ class SubscriptionMailer < ActionMailer::Base
     @user = user 
     @subscribable = subscribable 
 
-    mail to: user.email, subject: "Subscribed to #{@subscribable} Updates"
+    mail to: @user.email, subject: "Subscribed to #{@subscribable} Updates"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
