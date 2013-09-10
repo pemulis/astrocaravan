@@ -32,6 +32,6 @@ class SubscriptionMailer < ActionMailer::Base
     end
 
     mail to: sendgrid_recipients,
-         subject: "#{user} posted a comment to #{subscribable.name}"
+         subject: "#{user} posted a comment to #{commentable.name}"
   end
 end
