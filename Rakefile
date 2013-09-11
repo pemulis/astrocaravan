@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Hackonauts::Application.load_tasks
+Astrocaravan::Application.load_tasks

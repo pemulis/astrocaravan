@@ -1,6 +1,6 @@
 require 'api_constraints'
 
-Hackonauts::Application.routes.draw do
+Astrocaravan::Application.routes.draw do
   use_doorkeeper
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1, contraints: ApiConstraints.new(version: 1, default: true) do
