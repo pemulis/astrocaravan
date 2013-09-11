@@ -19,8 +19,8 @@ class SubscriptionMailer < ActionMailer::Base
   #
   #   en.user_mailer.new_comment.subject
   #
-  def new_comment(user, body, commentable)
-    @user = user
+  def new_comment(username, body, commentable)
+    @username = username
     @body = body
     @commentable = commentable
 
@@ -32,6 +32,6 @@ class SubscriptionMailer < ActionMailer::Base
     end
 
     mail to: sendgrid_recipients,
-         subject: "#{user} posted a comment to #{commentable.name}"
+         subject: "#{username} posted a comment to #{commentable.name}"
   end
 end

@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     @comment = @commentable.comments.new(comment_params)
     @comment.username = User.find(@comment.user_id).username
     if @comment.save
-      SubscriptionMailer.new_comment(@user, @body, @commentable).deliver
+      SubscriptionMailer.new_comment(@comment.username, @body, @commentable).deliver
       redirect_to @commentable, notice: 'Comment created.'
     else
       render :new
